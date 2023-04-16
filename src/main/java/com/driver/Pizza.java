@@ -49,7 +49,7 @@ public class Pizza {
             this.price += bagPrice;
         }
     }
-
+    
     public String getBill(){
         // your code goes here
         this.bill = billGenerator.getBill(this);

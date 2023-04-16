@@ -15,7 +15,7 @@ public class BillGeneratorImp implements BillGenerator {
         if(pizza.isTakeAway){
             var += "Paperbag Added: "+pizza.bagPrice+"\n";
         }
-        var += "Total Price: "+pizza.getBasePrice()+"\n";
+        var += "Total Price: "+pizza.getPrice()+"\n";
 
         return var;
     }
