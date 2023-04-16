@@ -15,10 +15,12 @@ public class Pizza {
     boolean isTakeAway = false;
     int bagPrice = 20;
     private BillGeneratorImp billGenerator;
+    private int totalBill;
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
         this.price = getPrice() ;
+        this.totalBill = getPrice();
         this.billGenerator = new BillGeneratorImp();
     }
 
@@ -26,11 +28,14 @@ public class Pizza {
         return this.isVeg ? vegBasePrice : nonVegBasePrice;
     }
 
+    public int getTotalBill(){
+        return this.totalBill;
+    }
     public void addExtraCheese(){
         // your code goes here
         if(!isCheeseAdded){
             isCheeseAdded = true;
-            this.price += cheesePrice;
+            this.totalBill += cheesePrice;
         }
     }
 
@@ -38,7 +43,7 @@ public class Pizza {
         // your code goes here
         if(!isToppingAdded){
             isToppingAdded = true;
-            this.price += this.isVeg ? vegToppingPrice : nonVegToppingPrice;
+            this.totalBill += this.isVeg ? vegToppingPrice : nonVegToppingPrice;
         }
     }
 
@@ -46,7 +51,7 @@ public class Pizza {
         // your code goes here
         if(!isTakeAway){
             isTakeAway = true;
-            this.price += bagPrice;
+            this.totalBill += bagPrice;
         }
     }
     
