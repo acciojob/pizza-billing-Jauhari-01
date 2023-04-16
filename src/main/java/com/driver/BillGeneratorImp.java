@@ -1,11 +1,10 @@
 package com.driver;
 
 public class BillGeneratorImp implements BillGenerator {
-
     @Override
     public String getBill(Pizza pizza) {
         String var = "" ;
-        var += "Base Price of The Pizza: "+pizza.getPrice()+"\n";
+        var += "Base Price Of The Pizza: "+pizza.getPrice()+"\n";
         if(pizza.isCheeseAdded){
             var += "Extra Cheese Added: "+pizza.cheesePrice+"\n";
         }
