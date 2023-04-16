@@ -5,7 +5,7 @@ public class BillGeneratorImp implements BillGenerator {
     @Override
     public String getBill(Pizza pizza) {
         String var = "" ;
-        var += "Base Price of The Pizza: "+pizza.getBasePrice()+"\n";
+        var += "Base Price of The Pizza: "+pizza.getPrice()+"\n";
         if(pizza.isCheeseAdded){
             var += "Extra Cheese Added: "+pizza.cheesePrice+"\n";
         }
@@ -15,7 +15,7 @@ public class BillGeneratorImp implements BillGenerator {
         if(pizza.isTakeAway){
             var += "Paperbag Added: "+pizza.bagPrice+"\n";
         }
-        var += "Total Price: "+pizza.getPrice()+"\n";
+        var += "Total Price: "+pizza.getTotalPrice()+"\n";
 
         return var;
     }

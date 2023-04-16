@@ -18,7 +18,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        this.price = getBasePrice() ;
+        this.price = getPrice() ;
         this.billGenerator = new BillGeneratorImp();
     }
 
@@ -56,8 +56,8 @@ public class Pizza {
         return this.bill;
     }
 
-    public int getBasePrice(){
-        return  this.isVeg ? vegBasePrice : nonVegBasePrice;
+    public int getTotalPrice(){
+        return  this.price;
     }
 
     public int getToppingPrice(){
